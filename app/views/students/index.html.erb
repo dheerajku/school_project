@@ -1,12 +1,24 @@
-<h1>My Students</h1>
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
 
-<%= link_to 'New student', new_teacher_student_path %>
+  <h1>My Students</h1>
+  <h3>Students list...</h3>
 
-<table>
+<p><%= link_to 'New student', new_teacher_student_path %></p>
+
+<table class="table table-bordered", style="width: 40%">
   <tr>
     <th>Name</th>
-    <th>Id</th>
-    <th colspan="3"></th>
+    <th>School_Id</th>
+    <th colspan="3">Actions</th>
   </tr>
  
   <% @student.each do |student| %>
@@ -23,3 +35,6 @@
 </table>
 
 <p><%= link_to 'Back', teachers_path %></p>
+
+</body>
+</html>

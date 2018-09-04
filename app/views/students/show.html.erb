@@ -1,11 +1,26 @@
-<p>
-  <strong>Name:</strong>
-  <%= @student.name %>
-</p>
- 
-<p>
-  <strong>School_Id:</strong>
-  <%= @student.number %>
-</p>
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+  <table class="table table-bordered", style="width: 20%">
+    <tr>
+      <th>Name</th>
+      <th>School_Id</th>
+    </tr>
+    <tr>
+      <td> <%= @student.name %> </td>
+      <td> <%= @student.number %> </td>
+    </tr>
+  </table>
 
 <%= link_to 'back', teacher_students_path %>
+
+</body>
+</html>
