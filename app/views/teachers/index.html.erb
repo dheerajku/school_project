@@ -1,0 +1,22 @@
+<h1>My school</h1>
+
+<%= link_to 'New Teacher', new_teacher_path %>
+<table id="Demo">
+  <tr>
+    <th>Name</th>
+    <th>Id</th>
+    <th colspan="3"></th>
+  </tr>
+ 
+  <% @teachers.each do |teacher| %>
+    <tr>
+      <td><%= teacher.name %></td>
+      <td><%= teacher.number %></td>
+      <td><%= link_to 'Show student list', teacher_students_path(teacher), method: :get %></td>
+      <td><%= link_to 'Edit', edit_teacher_path(teacher) %></td>
+      <td><%= link_to 'Destroy', teacher_path(teacher),
+      method: :delete, data: { confirm: 'Are you sure?' } %></td>
+                        
+    </tr>
+  <% end %>
+</table>
