@@ -16,8 +16,9 @@
 
 <table class="table table-bordered", style="width: 40%">
   <tr>
-    <th>Name</th>
+    <th>Teacher's Name</th>
     <th>School_Id</th>
+    <th>Number of Students</th>
     <th colspan="3"> Actions</th>
   </tr>
  
@@ -25,6 +26,7 @@
     <tr>
       <td><%= teacher.name %></td>
       <td><%= teacher.number %></td>
+      <td><%= teacher.students.count%></td>
       <td><%= link_to 'Show student list', teacher_students_path(teacher), method: :get %></td>
       <td><%= link_to 'Edit', edit_teacher_path(teacher) %></td>
       <td><%= link_to 'Destroy', teacher_path(teacher),
